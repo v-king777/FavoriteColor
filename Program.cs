@@ -22,43 +22,43 @@ namespace FavoriteColor
                 case "blue":
                     Console.BackgroundColor = ConsoleColor.Blue;
                     Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш любимый цвет - синий!");
+                    Console.WriteLine("Ваш цвет - синий!");
                     break;
 
                 case "red":
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш любимый цвет - красный!");
+                    Console.WriteLine("Ваш цвет - красный!");
                     break;
 
                 case "magenta":
                     Console.BackgroundColor = ConsoleColor.Magenta;
                     Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш любимый цвет - пурпурный!");
+                    Console.WriteLine("Ваш цвет - пурпурный!");
                     break;
 
                 case "green":
                     Console.BackgroundColor = ConsoleColor.Green;
                     Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш любимый цвет - зелёный!");
+                    Console.WriteLine("Ваш цвет - зелёный!");
                     break;
 
                 case "cyan":
                     Console.BackgroundColor = ConsoleColor.Cyan;
                     Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш любимый цвет - голубой!");
+                    Console.WriteLine("Ваш цвет - голубой!");
                     break;
 
                 case "yellow":
                     Console.BackgroundColor = ConsoleColor.Yellow;
                     Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш любимый цвет - жёлтый!");
+                    Console.WriteLine("Ваш цвет - жёлтый!");
                     break;
 
                 case "white":
                     Console.BackgroundColor = ConsoleColor.White;
                     Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш любимый цвет - белый!");
+                    Console.WriteLine("Ваш цвет - белый!");
                     break;
 
                 default:
