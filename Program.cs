@@ -7,65 +7,71 @@ namespace FavoriteColor
         static void Main(string[] args)
         {
             string[] colors = { "blue", "red", "magenta", "green", "cyan", "yellow", "white", "other" };
-            Console.Write("Напишите свой любимый цвет на английском: ");
-            string favColor = Console.ReadLine().Replace(" ", "").ToLower();
 
-            while (Array.IndexOf(colors, favColor) == -1) //Повторять, пока не будет введён цвет из списка
+            for (int i = 0; i < 7; i++)
             {
-                Console.WriteLine("Я не знаю такого цвета! Попробуйте ещё раз или напишите 'other'");
                 Console.Write("Напишите свой любимый цвет на английском: ");
-                favColor = Console.ReadLine().Replace(" ", "").ToLower();
-            }
+                string favColor = Console.ReadLine().Replace(" ", "").ToLower();
 
-            switch (favColor)
-            {
-                case "blue":
-                    Console.BackgroundColor = ConsoleColor.Blue;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш цвет - синий!");
-                    break;
+                while (Array.IndexOf(colors, favColor) == -1) //Повторять, пока не будет введён цвет из списка
+                {
+                    Console.WriteLine("Я не знаю такого цвета! Попробуйте ещё раз или напишите 'other'");
+                    Console.Write("Напишите свой любимый цвет на английском: ");
+                    favColor = Console.ReadLine().Replace(" ", "").ToLower();
+                }
 
-                case "red":
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш цвет - красный!");
-                    break;
+                Console.WriteLine("Iteration {0}", i);
 
-                case "magenta":
-                    Console.BackgroundColor = ConsoleColor.Magenta;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш цвет - пурпурный!");
-                    break;
+                switch (favColor)
+                {
+                    case "blue":
+                        Console.BackgroundColor = ConsoleColor.Blue;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Ваш цвет - синий!");
+                        break;
 
-                case "green":
-                    Console.BackgroundColor = ConsoleColor.Green;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш цвет - зелёный!");
-                    break;
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Ваш цвет - красный!");
+                        break;
 
-                case "cyan":
-                    Console.BackgroundColor = ConsoleColor.Cyan;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш цвет - голубой!");
-                    break;
+                    case "magenta":
+                        Console.BackgroundColor = ConsoleColor.Magenta;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Ваш цвет - пурпурный!");
+                        break;
 
-                case "yellow":
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш цвет - жёлтый!");
-                    break;
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Ваш цвет - зелёный!");
+                        break;
 
-                case "white":
-                    Console.BackgroundColor = ConsoleColor.White;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ваш цвет - белый!");
-                    break;
+                    case "cyan":
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Ваш цвет - голубой!");
+                        break;
 
-                default:
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Я пока только учусь и знаю всего 7 цветов!");
-                    break;
+                    case "yellow":
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Ваш цвет - жёлтый!");
+                        break;
+
+                    case "white":
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Ваш цвет - белый!");
+                        break;
+
+                    default:
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Я пока только учусь и знаю всего 7 цветов!");
+                        break;
+                }
             }
 
             Console.BackgroundColor = ConsoleColor.Black;
