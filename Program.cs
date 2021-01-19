@@ -6,22 +6,29 @@ namespace FavoriteColor
     {
         static void Main(string[] args)
         {
-            string[] colors = { "blue", "red", "magenta", "green", "cyan", "yellow", "white", "other" };
+            string[] colors = { "blue", "red", "magenta", "green", "cyan", "yellow", "white", "other", "брандахлыст" };
+            int i = 0;
 
-            for (int i = 0; i < 7; i++)
+            while (true)
             {
                 Console.Write("Напишите свой любимый цвет на английском: ");
                 string favColor = Console.ReadLine().Replace(" ", "").ToLower();
 
-                while (Array.IndexOf(colors, favColor) == -1) //Повторять, пока не будет введён цвет из списка
+                while (Array.IndexOf(colors, favColor) == -1) //Повторять, пока не будет введено значение из colors
                 {
                     Console.WriteLine("Я не знаю такого цвета! Попробуйте ещё раз или напишите 'other'");
+                    Console.WriteLine("Стоп-слово 'брандахлыст'");
                     Console.Write("Напишите свой любимый цвет на английском: ");
                     favColor = Console.ReadLine().Replace(" ", "").ToLower();
                 }
 
-                Console.WriteLine("Iteration {0}", i);
+                if (favColor == "брандахлыст") //Стоп-слово))
+                {
+                    Console.WriteLine("Цикл остановлен!");
+                    break;
+                }
 
+                Console.WriteLine("Итерация {0}", i);
                 switch (favColor)
                 {
                     case "blue":
@@ -72,12 +79,26 @@ namespace FavoriteColor
                         Console.WriteLine("Я пока только учусь и знаю всего 7 цветов!");
                         break;
                 }
+
+                i++;
             }
 
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("\nДля продолжения нажмите любую клавишу . . .");
-            Console.ReadKey(); //Выход из программы
+            Console.ReadKey();
+
+            Console.WriteLine("\nА ещё я умею переворачивать имя наизнанку:)");
+            Console.Write("Введите своё имя: ");
+            var name = Console.ReadLine();
+
+            for (int j = name.Length -1; j >= 0; j--)
+            {
+                Console.Write(name[j] + " ");
+            }
+
+            Console.WriteLine("\n\nДля продолжения нажмите любую клавишу . . .");
+            Console.ReadKey();
         }
     }
 }
